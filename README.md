@@ -195,10 +195,18 @@ graph TB
         K -.->|Save/Load| C
     end
     
-    style A fill:#e1f5ff
-    style B fill:#fff4e1
-    style C fill:#ffe1e1
-    style J fill:#e1ffe1
+    classDef inputNode fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
+    classDef generatorNode fill:#eab308,stroke:#ca8a04,stroke-width:2px,color:#000
+    classDef discriminatorNode fill:#dc2626,stroke:#b91c1c,stroke-width:2px,color:#fff
+    classDef processNode fill:#4b5563,stroke:#374151,stroke-width:2px,color:#fff
+    classDef outputNode fill:#16a34a,stroke:#15803d,stroke-width:2px,color:#fff
+    classDef dataNode fill:#7c3aed,stroke:#6d28d9,stroke-width:2px,color:#fff
+    
+    class A inputNode
+    class B generatorNode
+    class C,E,F,G discriminatorNode
+    class D1,H,I dataNode
+    class J,K outputNode
 ```
 
 ### WGAN-Specific Architecture
@@ -216,10 +224,17 @@ graph LR
         F --> I[Update Generator]
     end
     
-    style B fill:#fff4e1
-    style E fill:#ffe1e1
-    style F fill:#f0f0f0
-    style G fill:#f0f0f0
+    classDef inputNode fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
+    classDef generatorNode fill:#eab308,stroke:#ca8a04,stroke-width:2px,color:#000
+    classDef criticNode fill:#dc2626,stroke:#b91c1c,stroke-width:2px,color:#fff
+    classDef lossNode fill:#4b5563,stroke:#374151,stroke-width:2px,color:#fff
+    classDef imageNode fill:#16a34a,stroke:#15803d,stroke-width:2px,color:#fff
+    
+    class A,D inputNode
+    class B generatorNode
+    class E,H,I criticNode
+    class F,G lossNode
+    class C imageNode
 ```
 
 ## 🔬 Technical Details
